@@ -1,0 +1,9 @@
+-> Problem statement
+- Print the title and ratings of the movies released in 2012 whose metacritic rating is more than 60 and Domestic collections exceed 10 Crores. (Download the dataset from console)
+
+-> Query
+- SELECT I.Title, I.Rating FROM IMDB I
+  INNER JOIN earning E
+  ON E.Movie_id = I.Movie_id
+  WHERE I.MetaCritic>60 AND E.Domestic>100000000 AND I.Title LIKE '%2012%';
+
